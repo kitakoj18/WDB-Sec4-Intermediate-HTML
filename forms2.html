@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Inputs Demo</title>
+</head>
+
+<body>
+
+<p>Do you prefer cats or dogs?</p>
+<form>
+	<!-- radio buttons allow user to only check one option -->
+	<!-- below example: need to tell html that the dog and radio buttons are for one choice so it knows the user can only pick one or the other. We do this by giving the inputs the same name attribute so it connects them; when we do this, user can only pick one or the other. value attribute gives specific name to the user's choice so we know what they picked when they submit their answer i.e. the value to store-->
+	<label for="dogs">Dogs:</label>
+	<input id="dogs" type="radio" name="petChoice" value="dog">
+
+	<label for="cats">Cats:</label>
+	<input id="cats" type="radio" name="petChoice" value="cat">
+
+	<button>GO!</button>
+
+</form>
+
+<p>What's your favorite color?</p>
+<form>
+	<!-- dropdown option by using select and option tags. Need to have name attribute so we know to store value to that name or feature. The text inside the option tag will be the value to store. If we want to override the default, add value attribute to option tag-->
+	<select name="color">
+		<option>Red</option>
+		<option value="SomethingElse">Blue</option>
+		<option>Green</option>
+	</select>
+</form>
+
+
+	<!-- checkboxes allow user to check multiple options -->
+	<input type="checkbox" name="checkbox">
+
+	<!-- textarea for freeform text where we can specify size-->
+	<textarea name="answer" rows="10" cols="50"></textarea>
+
+</body>
+</html>

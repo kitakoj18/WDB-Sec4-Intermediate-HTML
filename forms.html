@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Demo</title>
+</head>
+<body>
+
+	<h1>Sign In</h1>
+
+	<!-- form tag is shell/container for all the input boxes; the area where all the boxes to enter information in -->
+	<!-- form sends a request somewhere: sends data from form to a server somewhere -->
+	<!-- action attribute: where to send the data; method attribute: what type of HTTP request (get, post, etc.) -->
+	<!-- input tag creates interactive controls; the type attribute determines the type of input -->
+	<!-- give names to input data so we can retrieve them later -->
+	<form action="http://wikipedia.org" method="get">
+
+		<!-- label tag gives labels to our elements in the form
+		and helps visually impaired when their programs look for these tags and reads it to them -->
+		<label>
+			Username:
+			<!-- required attribute is boolean attribute; we do not need to say it equals something but including it simply states that it is required for the user to enter this information in to submit; the general term for this type of validation is presence validation -->
+			<input name="username" type="text" placeholder="username" required>
+		</label>
+
+		<label>
+			Email:
+			<!-- type="email" attribute is a data validation; the type will require the user to enter something with a valid email format "@server.com" -->
+			<input name="email" type="email" placeholder="email">
+		</label>
+
+		<label>
+			Password:
+			<input name="password" type="password" placeholder="password">
+		</label>
+		
+		<button>Submit</button>
+		<!-- same as above -->
+		<input type="submit">
+
+	</form>
+
+	<!-- another way of creating labels for inputs... -->
+	<form action="http://wikipedia.org" method="get">
+
+		<!-- the "for" attribute in label tag and "id" attribute in input tag connect the two together: must have these attributes to connect -->
+		<label for="username">Username:</label>
+		<input id="username" name="username" type="text" placeholder="username">
+
+		<label for="password">Password:</label>
+		<input id="password" name="password" type="password" placeholder="password">
+		
+		<button>Submit</button>
+		<!-- same as above -->
+		<input type="submit">
+
+	</form>
+
+</body>
+</html>
